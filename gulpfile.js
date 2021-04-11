@@ -26,6 +26,10 @@ const paths = {
 		img_main: './img/**/*',
 	},
 
+	font: {
+		font: './font/*',
+	},
+
 	templates: {
 		html: './templates/*'
 	},
@@ -35,6 +39,7 @@ const paths = {
 		docs_js: 'docs/js/',
 		docs_js_libs: 'docs/js/libs/',
 		docs_img: 'docs/img/',
+		docs_font: 'docs/font/',
 		docs: 'docs/',
 	},
 };
@@ -66,7 +71,8 @@ function buildDirectory() {
 		.pipe(gulp.dest('./docs/css'))
 		.pipe(gulp.dest('./docs/js'))
 		.pipe(gulp.dest('./docs/js/libs'))
-		.pipe(gulp.dest('./docs/img'));
+		.pipe(gulp.dest('./docs/img'))
+		.pipe(gulp.dest('./docs/font'));
 }
 
 function copyHtmlDocs() {
@@ -115,6 +121,12 @@ function copyImgDocs() {
 		.pipe(gulp.dest(paths.expo.docs_img));
 }
 
+
+function copyFont() {
+	return gulp.src(paths.font.font, { sourcemaps: true })
+		.pipe(gulp.dest(paths.expo.docs_font));
+}
+
 function reload(done) {
     server.reload();
     done();
@@ -136,7 +148,10 @@ const watcher = () => {
 	gulp.watch('scss/*', gulp.series(copyCss, reload));
 	gulp.watch('scss/main.scss', gulp.series(copyCss, reload));
 	gulp.watch('scss/partials/*.scss', gulp.series(copyCss, reload));
+	gulp.watch('components/**/*.scss', gulp.series(copyCss, reload));
 	gulp.watch('templates/*.html', gulp.series(copyHtmlDocs, reload));
+	gulp.watch('img/*', gulp.series(copyImgDocs, reload));
+	gulp.watch('font/*', gulp.series(copyFont, reload));
 };
 
 /**
@@ -146,10 +161,10 @@ const watcher = () => {
  *
  * **/
 
-gulp.task('default', gulp.series(cleanDocs, copyHtmlDocs, buildDirectory, copyJs, copyJsLibs, copyCss, copyImgDocs, serve, watcher),);
+gulp.task('default', gulp.series(cleanDocs, copyHtmlDocs, buildDirectory, copyJs, copyJsLibs, copyCss, copyImgDocs, copyFont, serve, watcher),);
 
 
-gulp.task('build', gulp.series(cleanDocs, copyHtmlDocs, buildDirectory, copyJs, copyCss, copyImgDocs),);
+gulp.task('build', gulp.series(cleanDocs, copyHtmlDocs, buildDirectory, copyJs, copyJsLibs, copyCss, copyImgDocs, copyFont),);
 
 
 gulp.task('deleteAll', gulp.series(cleanDocs),);

@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+/**
+ * Capitan utils.scss v1.0.0
+ *
+ * Copyright brandung GmbH & Co.KG
+ * http://www.brandung.de/
+ *
+ * Date: 2016-04-05
+ * MIT License (MIT)
+ */
+
+
+/* ==========================================================================
+   Util classes
+   ========================================================================== */
+
+.u-unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.u-left {
+	float: left;
+}
+
+.u-right {
+	float: right;
+}
+
+.u-center {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.u-clear {
+	clear: both;
+}
+
+.u-text-right {
+	text-align: right;
+}
+
+.u-text-left {
+	text-align: left;
+}
+
+.u-text-center {
+	text-align: center;
+}
+
+.u-show-grid {
+	[class*="col-"] {
+		background: grey;
+		outline: 1px solid red;
+	}
+
+	header {
+		background: rgba(green, .5);
+	}
+
+	footer {
+		background: rgba(cyan, .5);
+	}
+}
+
+.u-reset-padding {
+	padding: 0 !important;
+
+	&-top {
+		padding-top: 0 !important;
+	}
+
+	&-right {
+		padding-right: 0 !important;
+	}
+
+	&-bottom {
+		padding-bottom: 0 !important;
+	}
+
+	&-left {
+		padding-left: 0 !important;
+	}
+
+	&-x {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	&-y {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+}
+
+.u-add-padding {
+	padding: $grid-gutter-width-half !important;
+
+	&-full {
+		padding: $grid-gutter-width !important;
+	}
+
+	&-double {
+		padding: $grid-gutter-width * 2 !important;
+	}
+
+	&-top {
+		padding-top: $grid-gutter-width-half !important;
+
+		&-full {
+			padding-top: $grid-gutter-width !important;
+		}
+
+		&-double {
+			padding-top: $grid-gutter-width * 2 !important;
+		}
+	}
+
+	&-right {
+		padding-right: $grid-gutter-width-half !important;
+
+		&-full {
+			padding-right: $grid-gutter-width !important;
+		}
+
+		&-double {
+			padding-right: $grid-gutter-width * 2 !important;
+		}
+	}
+
+	&-bottom {
+		padding-bottom: $grid-gutter-width-half !important;
+
+		&-full {
+			padding-bottom: $grid-gutter-width !important;
+		}
+
+		&-double {
+			padding-bottom: $grid-gutter-width * 2 !important;
+		}
+	}
+
+	&-left {
+		padding-left: $grid-gutter-width-half !important;
+
+		&-full {
+			padding-left: $grid-gutter-width !important;
+		}
+
+		&-double {
+			padding-left: $grid-gutter-width * 2 !important;
+		}
+	}
+
+	&-x {
+		padding-left: $grid-gutter-width-half !important;
+		padding-right: $grid-gutter-width-half !important;
+
+		&-full {
+			padding-left: $grid-gutter-width !important;
+			padding-right: $grid-gutter-width !important;
+		}
+
+		&-double {
+			padding-left: $grid-gutter-width * 2 !important;
+			padding-right: $grid-gutter-width * 2 !important;
+		}
+	}
+
+	&-y {
+		padding-top: $grid-gutter-width-half !important;
+		padding-bottom: $grid-gutter-width-half !important;
+
+		&-full {
+			padding-top: $grid-gutter-width !important;
+			padding-bottom: $grid-gutter-width !important;
+		}
+
+		&-double {
+			padding-top: $grid-gutter-width * 2 !important;
+			padding-bottom: $grid-gutter-width * 2 !important;
+		}
+	}
+}
+
+.u-reset-margin {
+	margin: 0 !important;
+
+	&-top {
+		margin-top: 0 !important;
+	}
+
+	&-right {
+		margin-right: 0 !important;
+	}
+
+	&-bottom {
+		margin-bottom: 0 !important;
+	}
+
+	&-left {
+		margin-left: 0 !important;
+	}
+
+	&-x {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	&-y {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	&-auto {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
+
+.u-add-margin {
+	margin: $grid-gutter-width-half !important;
+
+	&-full {
+		margin: $grid-gutter-width !important;
+	}
+
+	&-double {
+		margin: $grid-gutter-width * 2 !important;
+	}
+
+	&-top {
+		margin-top: $grid-gutter-width-half !important;
+
+		&-full {
+			margin-top: $grid-gutter-width !important;
+		}
+
+		&-double {
+			margin-top: $grid-gutter-width * 2 !important;
+		}
+	}
+
+	&-right {
+		margin-right: $grid-gutter-width-half !important;
+
+		&-full {
+			margin-right: $grid-gutter-width !important;
+		}
+
+		&-double {
+			margin-right: $grid-gutter-width * 2 !important;
+		}
+	}
+
+	&-bottom {
+		margin-bottom: $grid-gutter-width-half !important;
+
+		&-full {
+			margin-bottom: $grid-gutter-width !important;
+		}
+
+		&-double {
+			margin-bottom: $grid-gutter-width * 2 !important;
+		}
+	}
+
+	&-left {
+		margin-left: $grid-gutter-width-half !important;
+
+		&-full {
+			margin-left: $grid-gutter-width !important;
+		}
+
+		&-double {
+			margin-left: $grid-gutter-width * 2 !important;
+		}
+	}
+
+	&-x {
+		margin-left: $grid-gutter-width-half !important;
+		margin-right: $grid-gutter-width-half !important;
+
+		&-full {
+			margin-left: $grid-gutter-width !important;
+			margin-right: $grid-gutter-width !important;
+		}
+
+		&-double {
+			margin-left: $grid-gutter-width * 2 !important;
+			margin-right: $grid-gutter-width * 2 !important;
+		}
+	}
+
+	&-y {
+		margin-top: $grid-gutter-width-half !important;
+		margin-bottom: $grid-gutter-width-half !important;
+
+		&-full {
+			margin-top: $grid-gutter-width !important;
+			margin-bottom: $grid-gutter-width !important;
+		}
+
+		&-double {
+			margin-top: $grid-gutter-width * 2 !important;
+			margin-bottom: $grid-gutter-width * 2 !important;
+		}
+	}
+}
+
+.u-overflow-hidden {
+	overflow: hidden;
+}
+
+.u-bg {
+	&-blue {
+		background-color: #161528;
+	}
+
+	&-grey {
+		background-color: #F9F9F9;
+	}
+
+	&-orange{
+		background-color: #FD8C64;
+	}
+}
+
+/** + bootstrap visibility utilities */
+.u-hidden {
+	display: none !important;
+}
+
+$sizes: (
+	'xs', 'sm', 'md', 'lg', 'xl'
+);
+
+@each $size in $sizes {
+	.u-visible-#{$size} {
+		@include respondMax(point('min-#{$size}') - pxToEm(1)) {
+			display: none !important;
+		}
+	}
+
+	.u-hidden-#{$size} {
+		@include respondMin(point('min-#{$size}')) {
+			display: none !important;
+		}
+	}
+}

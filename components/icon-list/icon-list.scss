@@ -1,0 +1,38 @@
+.icon {
+	&-wrapper {
+		margin-top: 80px;
+		text-align: center;
+
+		@include respondMax(point('max-md')) {
+			margin-top: 40px;
+		}
+	}
+
+	&-img {
+		margin-bottom: 30px;
+	}
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		width: 170px;
+		margin: 0 auto;
+
+		@include respondMax(point('max-md')) {
+			margin-bottom: 40px;
+		}
+
+		p {
+			font-family: AvenirLTStdHeavy;
+			font-size: 24px;
+			margin-bottom: 0;
+		}
+
+		span{
+			font-family: AvenirLTStdRoman;
+			font-size: 18px;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/**
+ * Capitan layout.scss v2.0.0
+ *
+ * Copyright brandung GmbH & Co.KG
+ * http://www.brandung.de/
+ *
+ * Date: 2016-09-05
+ * MIT License (MIT)
+ */
+
+
+/* ==========================================================================
+   Global Layout
+   ========================================================================== */
+
+* {
+	@include prefix(box-sizing, border-box)
+}
+
+body {
+	background: color('white');
+	color: color('secondary');
+	font-size: $body-font-size;
+	line-height: 1.4;
+}
+
+body::before {
+	content: getBreakpointList();
+	display: none;
+}
+
+
+
+
+/* ==========================================================================
+   Grid overrides
+   ========================================================================== */
+
+// Container widths
+.container {
+	min-width: ($container-min-widths / $body-font-size-px) + em;
+	max-width: ($container-max-widths / $body-font-size-px) + em;
+	margin: 0 auto;
+	padding: 0 $grid-gutter-width*1.5;
+}
+
+// Row
+.row {
+	margin-bottom: ($grid-gutter-width / 2)
+}
+
+/* ==========================================================================
+  Content Elements
+  ========================================================================== */
+
+hr {
+	@include clearfix();
+	margin: 20px 0;
+}

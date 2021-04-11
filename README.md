@@ -3,8 +3,8 @@
 [![gulp][GULP VERSION BADGE]][GULP PAGE]
 
 
-# lern_projekt
-*Simple repo to learn new things!*
+# Optiktack
+*A side for a school project*
 
 - It works fine together with gits GitHub Pages
 
@@ -15,7 +15,6 @@
 
 
 ## Documentation
-### Gulp Workflow
 
 **Install all packages from package.json**
 

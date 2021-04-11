@@ -1,0 +1,31 @@
+.btn {
+	font-family: AvenirLTStdHeavy;
+	font-size: 18px;
+	border-radius: 10px;
+	padding: 8px 25px;
+	transition: all 0.5s ease;
+	color: #fff;
+
+	&-primary {
+		background-color: #FF8C64;
+		border-color: #FF8C64;
+
+		&:hover {
+			background-color: #ff7444;
+			border-color: #ff7444;
+			
+		}
+	}
+
+	&-secondary {
+		background-color: #161528;
+		border-color: #161528;
+
+		&:hover {
+			background-color: #2a294e;
+			border-color: #2a294e;
+			color: #fff;
+			
+		}
+	}
+}

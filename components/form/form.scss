@@ -1,0 +1,98 @@
+.form {
+    margin-top: 80px;
+
+    input, textarea {
+        background-color: color("grey");
+        border-radius: 10px;
+        border: 1px solid color("primary");
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    input {
+        height: 50px;
+    }
+
+    label {
+        font-family: AvenirLTStdHeavy;
+		font-size: 20px;
+    }
+
+    &-top {
+        margin-bottom: 40px;
+        span {
+            font-family: AvenirLTStdOblique;
+		    font-size: 16px;
+        }
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        & .form-field-wrapper {
+            position: relative;
+
+            & .parsley-required {
+                color: red;
+                list-style-type: none;
+                top: -20px;
+                position: absolute;
+            }
+        }
+
+        & .form-right, & .form-left {
+            width: 50%;
+        } 
+
+        & .form-left {
+            margin-right: 25px;
+
+            input {
+                margin-bottom: 38px;
+            }
+        }
+
+        & .form-right {
+            margin-left: 25px;
+
+            & .form-field-wrapper {
+                height: 100%;
+            }
+
+            textarea {
+                height: 100%;
+            }
+        }
+    }
+
+    &-end {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button {
+            width: 215px;
+            margin-top: 70px;
+            margin-bottom: 30px;
+        }
+
+        span {
+            font-family: AvenirLTStdBook;
+		    font-size: 20px;
+        }
+    }
+
+    &-field-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        
+
+        &:last-child{
+            input {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

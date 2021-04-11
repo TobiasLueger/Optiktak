@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   Base settings
+   ========================================================================== */
+
+/* Base sizes */
+$base-em: 16;
+
+/* Body font size */
+$body-font-size-px: 16;
+$body-font-size: percentage(($body-font-size-px / $base-em) * 100 / 100); // in percent
+
+
+/* ==========================================================================
+   Grid-System
+   ========================================================================== */
+
+// Grid breakpoints
+
+/* <@breakpoints */
+$featurephone: 320;
+$smartphone: 480;
+$tablet: 768;
+$desktop: 992;
+$retina: 1200;
+
+/* breakpoints@> */
+
+
+// Quickly modify global grid styling
+$enable-flex: false !default;
+$enable-grid-classes: true !default;
+
+// Grid Container max- and min-width dimensions
+$container-max-widths: 1280 !default;
+$container-min-widths: $featurephone !default;
+
+// Number of columns in the grid.
+$grid-columns: 12 !default;
+// Padding between columns.
+$grid-gutter-width: 30px !default;
+// Gets divided in half for the left and right.
+$grid-gutter-width-half: $grid-gutter-width / 2;
+$grid-gutter-width-base:     $grid-gutter-width;
+$grid-gutter-widths: (
+		xs: $grid-gutter-width-base,
+		sm: $grid-gutter-width-base,
+		md: $grid-gutter-width-base,
+		lg: $grid-gutter-width-base,
+		xl: $grid-gutter-width-base
+);
+
+// map for getBreakpointList() function
+$js-breakpoints: (
+'xs': $featurephone,
+'sm': $smartphone,
+'md': $tablet,
+'lg': $desktop,
+'xl': $retina
+);
+
+// map for bootstrap mixins
+$grid-breakpoints: (
+'xs': $featurephone + px,
+'sm': $smartphone + px,
+'md': $tablet + px,
+'lg': $desktop + px,
+'xl': $retina + px
+) !default;
+
+// map for respondMin/respondMax mixin
+$breakpoints: (
+'min-xs': pxToEm($featurephone),
+'min-sm': pxToEm($smartphone),
+'min-md': pxToEm($tablet),
+'min-lg': pxToEm($desktop),
+'min-xl': pxToEm($retina),
+'max-xs': pxToEm($smartphone - 1),
+'max-sm': pxToEm($tablet - 1),
+'max-md': pxToEm($desktop - 1),
+'max-lg': pxToEm($retina - 1)
+);
+
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+/* <@colors */
+$colors: (
+'primary': #ff8c64,
+'primary-hover': #ff7444,
+'secondary': #161528,
+'secondary-hover': #312f5a,
+'white': #fff,
+'grey': #E6E6E6
+);
+
+/* colors@> */

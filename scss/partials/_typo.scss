@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   Webfonts
+   ========================================================================== */
+
+
+@font-face {
+   font-family: AvenirLTStdRoman;
+   src: url("../font/AvenirLTStd-Roman.otf") format("opentype");
+}
+
+@font-face {
+   font-family: AvenirLTStdMedium;
+   src: url("../font/AvenirLTStd-Medium.otf") format("opentype");
+}
+
+@font-face {
+   font-family: AvenirLTStdMediumOblique;
+   src: url("../font/AvenirLTStd-MediumOblique.otf") format("opentype");
+}
+
+@font-face {
+   font-family: AvenirLTStdBlack;
+   src: url("../font/AvenirLTStd-Black.otf") format("opentype");
+}
+
+@font-face {
+   font-family: AvenirLTStdHeavy;
+   src: url("../font/AvenirLTStd-Heavy.otf") format("opentype");
+}
+
+@font-face {
+   font-family: AvenirLTStdBook;
+   src: url("../font/AvenirLTStd-Book.otf") format("opentype");
+}
+
+@font-face {
+   font-family: AvenirLTStdOblique;
+   src: url("../font/AvenirLTStd-Oblique.otf") format("opentype");
+}
+
+@font-face {
+   font-family: AvenirLTStdLightOblique;
+   src: url("../font/AvenirLTStd-LightOblique.otf") format("opentype");
+}
+
+
+* {
+   font-family: AvenirLTStdMedium;
+}

@@ -1,0 +1,36 @@
+.social-chip {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px 0 0 10px;
+    background-color: color("primary");
+    width: 265px;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 88%;
+    right: -200px;
+    transition: right 1s;
+    z-index: 10;
+
+    &.is-active {
+        right: 0px;
+    }
+
+    #social-chip_trigger {
+        cursor: pointer;
+    }
+
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        a {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+    }
+}

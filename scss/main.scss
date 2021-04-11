@@ -1,1 +1,42 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   Bootstrap
+   ========================================================================== */
+
+@import "partials/bootstrap";
+
+/* ==========================================================================
+   Core functions, variables and mixins
+   ========================================================================== */
+
+@import "partials/functions";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/elements";
+
+
+/* ==========================================================================
+   Default layout partials
+   ========================================================================== */
 @import "partials/layout";
+@import "partials/typo";
+
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+@import "../components/header/header";
+@import "../components/footer/footer";
+@import "../components/stage/stage";
+@import "../components/button/button";
+@import "../components/form/form";
+@import "../components/icon-list/icon-list";
+@import "../components/social-chip/social-chip";
+
+
+/* ==========================================================================
+   Utility classes
+   ========================================================================== */
+@import "partials/utils";
